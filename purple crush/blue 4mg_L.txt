@@ -1,0 +1,5 @@
+"blue 8mg_L.spc - RawData"
+"No."	"P/V"	"Wavelength nm."	"Abs."	"Description"
+1	"Peak"	629.00	0.896	""
+2	"Peak"	407.00	0.160	""
+3	"Valley"	473.00	0.063	""

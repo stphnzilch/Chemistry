@@ -1,0 +1,35 @@
+import pylab
+from pylab import *
+import matplotlib.pyplot as plt
+
+from scipy import stats
+import numpy as np
+
+x = [0, .08, .4, 2, 10, 100]
+y = [-0.0002,	0.006,	0.0314,	0.1588,	0.7928,	1.6744] #std
+
+(m,b)=polyfit(x,y,1)
+print b 
+print m
+yp = polyval([m,b],x)
+slope= "y=", m, "x+", b
+polynomial = -0.000696*x**2 + 0.0864*x - 0.003329
+plot (x,polynomial)
+print "slope: ", slope
+slope, intercept, r_value, p_value, std_err = stats.linregress(x,y)
+print "r-squared:", r_value**2
+plot(x,yp)
+scatter(x,y)
+grid(True)
+xlabel('ppM')
+ylabel('Abs')
+title('Calibration Curve Phosphate')
+text(0, 2, r'y=0.23x-0.06')
+text(0, 1.8, r'r-squared: 0.998')
+
+show()
+
+
+pylab.show()
+
+
